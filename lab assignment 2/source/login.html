@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.16/angular.js" data-semver="1.2.16"></script>
+<script>
+function LoginController($scope){
+$scope.login=function(user,pwd)
+{
+	localStorage.setItem("username",user);
+};
+}
+</script>
+<title>User main Page</title>
+<style>
+.myButton {
+	-moz-box-shadow:inset 0px 0px 0px 0px #9fb4f2;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #9fb4f2;
+	box-shadow:inset 0px 0px 0px 0px #9fb4f2;
+	background-color:#7892c2;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:6px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton:hover {
+	background-color:#476e9e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.loginbtn
+{
+	position:absolute;
+	top:350px;
+	left:570px;
+}
+.registerbtn
+{
+	position:absolute;
+	top:400px;
+	left:560px;
+}
+.heading{
+margin: 1em 0 0.5em 0;
+	color:#00000;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+	position:absolute;
+	left:400px;
+}
+</style>
+
+
+</head>
+
+<body style="background-image:url(tree.jpg)" ng-app ng-controller="LoginController">
+
+<form action="home.html">
+<div class="loginbtn">
+<!-- <a href="home.html" class="myButton">Login</a> -->
+<input type="submit" ng-click="login(userName,pwd)" value="Login" class="myButton"></input>
+</div>
+
+<div class="registerbtn">
+<a href="register.html" class="myButton" >Register</a>
+</div>
+<div class="heading">
+<h2>Login</h2>
+<form>
+<div style="position:absolute;top:220px;left:150px;">
+<input type="text" placeholder="User Name" ng-model="userName" id="user"><br>
+<input type="password" placeholder="Password"
+ style="position:absolute;top:30px;" ng-model="pwd">
+</div></form>
+<div style="position:absolute;left:100px;top:400px;">
+</div>
+</form>
+</body>
+
+</html>
