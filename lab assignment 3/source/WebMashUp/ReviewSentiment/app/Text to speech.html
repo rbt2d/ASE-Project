@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ramana</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+<input type="text" name="text" value="" maxlength="100" />
+<input onclick='speak()' type='button' value='🔊 Play' />
+<script>
+    function speak() {
+        var text = $('input[name="text"]').val();
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>
